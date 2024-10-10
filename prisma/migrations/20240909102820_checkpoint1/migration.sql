@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE "users" ALTER COLUMN "cin" DROP NOT NULL,
+ALTER COLUMN "prenom" DROP NOT NULL,
+ALTER COLUMN "em_number" DROP NOT NULL;
