@@ -12,10 +12,10 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:3001',
-  'https://2d32-41-226-167-93.ngrok-free.app',  
+ 'https://2d32-41-226-167-93.ngrok-free.app',  // Your Next.js frontend running locally
   'https://3c05-41-226-167-93.ngrok-free.app',
-  'https://itinevel-front.vercel.app', 
-  'https://itinevel-front-git-main-itinevels-projects.vercel.app', 
+  'https://itinevel-front.vercel.app', // Primary domain
+  'https://itinevel-front-git-main-itinevels-projects.vercel.app', // Main branch domain
   /\.itinevels-projects\.vercel\.app$/
 ];
 
