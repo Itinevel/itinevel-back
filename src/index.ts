@@ -12,10 +12,11 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:3001',
- 'https://2d32-41-226-167-93.ngrok-free.app',  // Your Next.js frontend running locally
+  'https://2d32-41-226-167-93.ngrok-free.app',  
   'https://3c05-41-226-167-93.ngrok-free.app',
-  'https://itinevel-front-git-main-itinevels-projects.vercel.app',
-  'https://itinevel-front-4b57py20u-itinevels-projects.vercel.app'
+  'https://itinevel-front.vercel.app', 
+  'https://itinevel-front-git-main-itinevels-projects.vercel.app', 
+  /\.itinevels-projects\.vercel\.app$/
 ];
 
 const corsOptions = {
