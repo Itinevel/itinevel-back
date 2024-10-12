@@ -221,6 +221,7 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
+    
     // Check if the user's email is confirmed
     if (!user.emailConfirmed) {
       return res.status(403).json({ error: 'Please confirm your email before logging in.' });
