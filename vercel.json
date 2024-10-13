@@ -1,12 +1,19 @@
 {
     "version": 2,
     "builds": [
-      { "src": "./src/index.ts",
+      {
+        "src": "./src/index.ts",
         "use": "@vercel/node",
-        "config": { "includeFiles": ["src/**/*"] } }
+        "config": {
+          "includeFiles": ["src/**/*"]
+        }
+      }
     ],
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/src/index.ts" }
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "src/index.ts"
+      }
     ],
     "buildCommand": "npm run build"
   }
