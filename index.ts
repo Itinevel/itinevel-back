@@ -1,10 +1,10 @@
 import express from 'express';
 import cors from 'cors';
-import itineraryRoutes from './routes/itineraryRoutes';
-import connectMongoDB from './config/mongo';
-import prisma from './config/database';
-import authRouter from './controllers/authRoutes';
-import userRoutes from './routes/userRoutes';
+import itineraryRoutes from './src/routes/itineraryRoutes';
+import connectMongoDB from './src/config/mongo';
+import prisma from './src/config/database';
+import authRouter from './src/controllers/authRoutes';
+import userRoutes from './src/routes/userRoutes';
 
 const app = express();  
 
@@ -16,7 +16,7 @@ const allowedOrigins = [
   'https://3c05-41-226-167-93.ngrok-free.app',
   'https://itinevel-front.vercel.app', // Primary domain
   'https://itinevel-front-git-main-itinevels-projects.vercel.app', // Main branch domain
-  /\.itinevels-projects\.vercel\.app$/
+  
 ];
 
 const corsOptions = {
