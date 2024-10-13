@@ -1,10 +1,10 @@
 import express from 'express';
 import cors from 'cors';
-import itineraryRoutes from './src/routes/itineraryRoutes';
-import connectMongoDB from './src/config/mongo';
-import prisma from './src/config/database';
-import authRouter from './src/controllers/authRoutes';
-import userRoutes from './src/routes/userRoutes';
+import itineraryRoutes from './routes/itineraryRoutes';
+import connectMongoDB from './config/mongo';
+import prisma from './config/database';
+import authRouter from './controllers/authRoutes';
+import userRoutes from './routes/userRoutes';
 
 const app = express();  
 
