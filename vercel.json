@@ -7,7 +7,9 @@
     ],
     "routes": [
         { "src": "/api/(.*)", "dest": "src/index.ts" }],
-    
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/src" }
+    ],
     "buildCommand": "npm run build"
   }
   
