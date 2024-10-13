@@ -5,8 +5,6 @@
         "use": "@vercel/node",
         "config": { "includeFiles": ["src/**/*"] } }
     ],
-    "routes": [
-        { "src": "/api/(.*)", "dest": "src/index.ts" }],
     "rewrites": [
       { "source": "/(.*)", "destination": "/src" }
     ],
