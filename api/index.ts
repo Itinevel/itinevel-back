@@ -34,7 +34,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/itinerary', itineraryRoutes);
-app.use('/api/', authRouter);
+app.use('/api/controllers', authRouter);
 app.use('/api/users', userRoutes);
 
 // Connect to MongoDB
@@ -52,6 +52,7 @@ app.get("/", (req, res) => {
   res.status(200).json({
     message: "Hello, world!",
 });
+
 });
 
 export default app;
