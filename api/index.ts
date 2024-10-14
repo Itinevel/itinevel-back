@@ -33,7 +33,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 // Routes
-
+app.use('/api/itinerary', itineraryRoutes);
 app.use('/api/', authRouter);
 app.use('/api/users', userRoutes);
 
