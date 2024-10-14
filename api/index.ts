@@ -46,6 +46,12 @@ connectMongoDB();
   console.log(`Server running on port ${PORT}`);
  });
 
+ app.get("/xd", (req, res) => {
+  res.status(200).json({
+    message: "Hello, world!xdddd",
+});
+ });
+
 app.get("/", (req, res) => {
   res.status(200).json({
     message: "Hello, world!",
