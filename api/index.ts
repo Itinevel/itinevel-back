@@ -5,6 +5,7 @@ import connectMongoDB from './config/mongo';
 import prisma from './config/database';
 import authRouter from './controllers/authRoutes';
 import userRoutes from './routes/userRoutes';
+import testRouter from './controllers/testController';
 
 const app = express();  
 
@@ -34,9 +35,9 @@ app.use(express.json());
 
 // Routes
 app.use('/api/itinerary', itineraryRoutes);
-app.use('/api/', authRouter);
+app.use('/api', authRouter);
 app.use('/api/users', userRoutes);
-
+app.use('/api/t', testRouter);
 // Connect to MongoDB
 connectMongoDB();
 
