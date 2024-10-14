@@ -6,7 +6,6 @@ import prisma from './config/database';
 import authRouter from './controllers/authRoutes';
 import userRoutes from './routes/userRoutes';
 
-const { getPlans } = require('./controller/noteController')
 const app = express();  
 
 // Set up CORS options to allow specific origins
@@ -37,7 +36,7 @@ app.use(express.json());
 app.use('/api/itinerary', itineraryRoutes);
 app.use('/api/', authRouter);
 app.use('/api/users', userRoutes);
-app.get('/plans', getPlans)
+
 // Connect to MongoDB
 connectMongoDB();
 
@@ -49,7 +48,7 @@ connectMongoDB();
 
  app.get("/home", (req, res) => {
     res.status(200).json({
-      message: "Hello, worldrgdgdgrdgfefes!",
+      message: "Hello, worldrgdgrdgrdggr!",
   });
 });
 
