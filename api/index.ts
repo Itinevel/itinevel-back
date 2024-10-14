@@ -5,6 +5,7 @@ import connectMongoDB from './config/mongo';
 import prisma from './config/database';
 import authRouter from './controllers/authRoutes';
 import userRoutes from './routes/userRoutes';
+const { getPlans } = require('./controller/PlanController');
 
 const app = express();  
 
@@ -31,7 +32,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use(express.json());
-
+app.get('/plans', getPlans)
 // Routes
 app.use('/api/itinerary', itineraryRoutes);
 app.use('/api/', authRouter);
