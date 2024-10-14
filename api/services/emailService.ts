@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport({
 
 // Function to send confirmation email
 export const sendConfirmationEmail = async (email: string, token: string) => {
-  const confirmationUrl = `http://localhost:3000/confirm-email?token=${token}`; // Adjust to your front-end domain
+  const confirmationUrl = `https://itinevel-front.vercel.app/confirm-email?token=${token}`; // Adjust to your front-end domain
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
@@ -42,7 +42,7 @@ export const sendConfirmationEmail = async (email: string, token: string) => {
 };
 
 export const sendPasswordResetEmail = async (email: string, token: string) => {
-  const resetLink = `http://localhost:3000/reset-password?token=${token}`; // Replace with your frontend URL
+  const resetLink = `https://itinevel-front.vercel.app/reset-password?token=${token}`; // Replace with your frontend URL
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
