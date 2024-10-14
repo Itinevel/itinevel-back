@@ -105,6 +105,6 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
-  "include": ["src/**/*", "index.ts", "api/index.ts", "api/models", "api/routes", "api/services"],
+  "include": ["api/**/*", "index.ts", "api/index.ts", "api/models", "api/routes", "api/services"],
   "exclude": ["node_modules"]
 }
