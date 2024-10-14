@@ -6,7 +6,7 @@
        }
     ],
     "rewrites": [
-      { "source": "/(.*)", "destination": "/api" }
+      { "source": "/src/(.*)", "destination": "/api" }
     ],
     "buildCommand": "npm run build"
   }
