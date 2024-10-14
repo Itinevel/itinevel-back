@@ -34,7 +34,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/itinerary', itineraryRoutes);
-app.use('/api/controllers', authRouter);
+app.use('/api/', authRouter);
 app.use('/api/users', userRoutes);
 
 // Connect to MongoDB
@@ -46,7 +46,11 @@ connectMongoDB();
   console.log(`Server running on port ${PORT}`);
  });
 
-
+ app.get("/home", (req, res) => {
+    res.status(200).json({
+      message: "Hello, world!",
+  });
+});
 
 app.get("/", (req, res) => {
   res.status(200).json({
