@@ -5,7 +5,7 @@ import connectMongoDB from './config/mongo';
 import prisma from './config/database';
 import authRouter from './controllers/authRoutes';
 import userRoutes from './routes/userRoutes';
-const { getPlans } = require('./controller/noteController')
+
 const app = express();  
 
 // Set up CORS options to allow specific origins
@@ -51,8 +51,6 @@ connectMongoDB();
       message: "Hello, worlderfesfesfesf!",
   });
 });
-
-app.get('/plans', getPlans)
 
 app.get("/", (req, res) => {
   res.status(200).json({
