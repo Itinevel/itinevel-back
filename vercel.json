@@ -6,14 +6,7 @@
        }
     ],
     "rewrites": [
-      { "source": "/(.*)", "destination": "/api", "methods": [
-        "GET",
-        "POST",
-        "PUT",
-        "PATCH",
-        "DELETE",
-        "OPTIONS"
-    ] }
+      { "source": "/(.*)", "destination": "/api" }
     ],
     "buildCommand": "npm run build"
   }
