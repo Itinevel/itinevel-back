@@ -1,6 +1,8 @@
 import prisma from "api/config/database";
 
+
 export async function GET(){
+    console.log("GET")
     const users = await prisma.users.findMany()
     if(!users){
         return Response.json({status:200, messgae:"No users avalible"})
