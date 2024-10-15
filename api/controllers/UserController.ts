@@ -27,8 +27,7 @@ export const fetchUserPlans = async (req: Request, res: Response): Promise<void>
     });
 
     if (!plans || plans.length === 0) {
-      res.status(404).json({ message: 'No plans found for this user.' });
-      return;
+      res.json({});
     }
 
     res.json(plans);

@@ -2,11 +2,15 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
 dotenv.config();
+dotenv.config();
 
-const mongoURI = process.env.MONGO_URI || 'mongodb+srv://salim:DlS2iHUlANBqujtT@itinerary-project-mongo.v1n64.mongodb.net/itineraryprojectdb?retryWrites=true&w=majority&appName=Itinerary-project-mongo-cluster';
+const mongoURI = process.env.MONGO_URI;
 
 const connectMongoDB = async () => {
     try {
+        if (!mongoURI) {
+            throw new Error('MongoDB URI is not defined in environment variables');
+        }
         await mongoose.connect(mongoURI);
         console.log('Connected to MongoDB');
     } catch (error) {
